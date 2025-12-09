@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boka Besök - Minai Zoo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Minai Zoo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="djur.html">Djur</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="bokning.html" aria-current="page">Boka Besök</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-layout">
+        <!-- Hero-sektion -->
+        <section class="hero" role="region" aria-label="Bokningssektion">
+            <h2>Boka ditt besök på Minai Zoo!</h2>
+            <p>Fyll i formuläret nedan för att boka biljetter till vår zoo-upplevelse.</p>
+        </section>
+
+        <!-- Öppettider -->
+         <section class="home-info" role="region" aria-labelledby="hoursTitle">
+            <h3 id="hoursTitle">Öppettider</h3>
+            <div class="hours-container">
+                <div class="hours-card">
+                    <h4>Måndag - Fredag</h4>
+                    <p>09:00 - 17:00</p>
+                </div>
+                <div class="hours-card">
+                    <h4>Lördag</h4>
+                    <p>10:00 - 18:00</p>
+                </div>
+                <div class="hours-card">
+                    <h4>Söndag</h4>
+                    <p>10:00 - 16:00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bokningsformulär -->
+        <section class="home-info" role="region" aria-labelledby="bokningTitle">
+            <h3 id="bokningTitle">Bokningsformulär</h3>
+            <form action="#" method="post" class="booking-form">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="date">Datum för besök:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="tickets">Antal biljetter:</label>
+                <input type="number" id="tickets" name="tickets" min="1" max="20" required>
+
+                <button type="submit" class="cta-button">Boka nu</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content-wrapper">
+            <div class="footer-contact">
+                <h3>Kontakta Oss</h3>
+                <p><strong>Telefon:</strong> <a href="tel:+46123456789">012-345 67 89</a></p>
+                <p><strong>E-post:</strong> <a href="mailto:info@minaizoo.se">info@minaizoo.se</a></p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Följ oss i sociala medier</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com/minaizoo" target="_blank">Facebook</a>
+                    <a href="https://instagram.com/minaizoo" target="_blank">Instagram</a>
+                    <a href="https://twitter.com/minaizoo" target="_blank">X/Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Minai Zoo. Alla rättigheter reserverade.</p>
+            <p><a href="/integritetspolicy">Integritetspolicy</a> | <a href="/kopvillkor">Köpvillkor</a></p>
+        </div>
+    </footer>
+</body>
+</html>

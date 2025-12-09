@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontakt — Minai Zoo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Minai Zoo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="djur.html">Djur</a></li>
+        <li><a href="om-oss.html">Om oss</a></li>
+        <li><a href="bokning.html">Boka Besök</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <!-- Öppettider -->
+    <aside class="opening-hours" style="font-size:0.95rem; color:#555;">
+      <h2>Öppettider</h2>
+      <p>
+        Mån–Fre: 09:00–17:00<br>
+        Lör: 10:00–18:00<br>
+        Sön: 10:00–16:00
+      </p>
+    </aside>
+
+    <!-- Kontaktformulär -->
+    <section style="flex:3; background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.06); margin-left:20px;">
+      <h2>Kontaktformulär</h2>
+      <p>Skicka gärna ett meddelande — vi återkommer så snart vi kan.</p>
+
+      <form id="contactForm" action="#" method="post" onsubmit="event.preventDefault(); alert('Tack! Ditt meddelande skickades (fiktivt).');">
+        <label for="name">Namn</label><br />
+        <input id="name" name="name" type="text" required placeholder="Ditt namn" style="width:100%; padding:8px; margin:6px 0 12px; border-radius:8px; border:1px solid #d3e0ef;" />
+
+        <label for="email">E-post</label><br />
+        <input id="email" name="email" type="email" required placeholder="exempel@mejl.se" style="width:100%; padding:8px; margin:6px 0 12px; border-radius:8px; border:1px solid #d3e0ef;" />
+
+        <label for="message">Meddelande</label><br />
+        <textarea id="message" name="message" rows="6" required placeholder="Skriv ditt meddelande här..." style="width:100%; padding:10px; margin:6px 0 12px; border-radius:8px; border:1px solid #d3e0ef;"></textarea>
+
+        <button type="submit">Skicka meddelande</button>
+      </form>
+
+      <!-- Kontaktinfo -->
+      <h3 style="margin-top:18px;">Kontaktinfo</h3>
+      <p>E-post: <a href="mailto:info@minaizoo.se">info@minaizoo.se</a><br />Telefon: 012-345 67 89</p>
+
+      <!-- Kontaktpersoner -->
+      <h3>Vem kontaktar jag?</h3>
+      <ul>
+        <li>Allmänna frågor: <a href="mailto:info@minaizoo.se">info@minaizoo.se</a></li>
+        <li>Skolprogram: Anna Svensson, <a href="mailto:anna@minaizoo.se">anna@minaizoo.se</a></li>
+        <li>Bokningar & gruppbesök: Erik Larsson, <a href="mailto:erik@minaizoo.se">erik@minaizoo.se</a></li>
+      </ul>
+
+      <!-- Karta -->
+      <h3>Hitta hit</h3>
+      <p>Vi ligger centralt i Djurstaden. Se karta nedan för vägbeskrivning:</p>
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!..." 
+          width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy">
+      </iframe>
+
+      <!-- FAQ -->
+      <h3 style="margin-top:20px;">Vanliga frågor</h3>
+      <ul>
+        <li><strong>Finns det parkering?</strong> Ja, vi har en stor gratis parkering vid entrén.</li>
+        <li><strong>Kan jag ta med hund?</strong> Endast ledarhundar är tillåtna.</li>
+        <li><strong>Finns det restaurang?</strong> Ja, vårt café erbjuder fika och lättare lunch.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content-wrapper">
+        <div class="footer-contact">
+            <h3>Kontakta Oss</h3>
+            <p><strong>Telefon:</strong> <a href="tel:+46123456789">012-345 67 89</a></p>
+            <p><strong>E-post:</strong> <a href="mailto:info@minaizoo.se">info@minaizoo.se</a></p>
+            
+            <p class="address">
+                <strong>Besöksadress:</strong><br>
+                Djurgårdsgatan 10<br>
+                123 45 Djurstaden
+            </p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Följ oss i sociala medier</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com/minaizoo" target="_blank" aria-label="Minai Zoo på Facebook">Facebook</a>
+                <a href="https://instagram.com/minaizoo" target="_blank" aria-label="Minai Zoo på Instagram">Instagram</a>
+                <a href="https://twitter.com/minaizoo" target="_blank" aria-label="Minai Zoo på X/Twitter">X/Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Minai Zoo. Alla rättigheter reserverade.</p>
+        <p><a href="/integritetspolicy">Integritetspolicy</a> | <a href="/kopvillkor">Köpvillkor</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

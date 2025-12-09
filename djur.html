@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Djur — Minai Zoo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1>Minai Zoo</h1>
+
+            <button class="hamburger" id="filterToggle" aria-label="Visa meny och filter">☰ Filter</button> 
+
+            <nav aria-label="Huvudnavigering" class="main-nav-desktop">
+                <ul class="main-nav-list">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="djur.html" aria-current="page">Djur</a></li>
+                    <li><a href="om-oss.html">Om oss</a></li>
+                    <li><a href="bokning.html">Boka Besök</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout">
+        <aside class="controls" id="controlsPanel" aria-label="Sök och filter">
+            <button class="close-btn" id="closeControls" aria-label="Stäng filterpanel">✕</button>
+
+            <nav aria-label="Mobilnavigering" class="main-nav-mobile">
+            </nav>
+            <hr> <h2>Sök &amp; filter</h2>
+            <label for="searchInput" class="visually-hidden">Sök djur</label>
+            <input id="searchInput" type="search" placeholder="Sök på namn, typ eller färg..." aria-label="Sök djur" />
+
+            <div id="filterButtons" class="filter-buttons" role="toolbar" aria-label="Filtrera djur">
+                <div class="filter-group">
+                    <h3>Visa</h3>
+                    <button data-filter="allt" class="active" aria-pressed="true">Alla djur</button>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Arter</h3>
+                    <button data-filter="tiger">Tiger</button>
+                    <button data-filter="lejon">Lejon</button>
+                    <button data-filter="järv">Järv</button>
+                    <button data-filter="björn">Björn</button>
+                    <button data-filter="älg">Älg</button>
+                    <button data-filter="utter">Utter</button>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Typer</h3>
+                    <button data-filter="däggdjur">Däggdjur</button>
+                    <button data-filter="rovdjur">Rovdjur</button>
+                    <button data-filter="herbivor">Herbivor</button>
+                    <button data-filter="vattenlevande">Vattenlevande</button>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Färger</h3>
+                    <button data-filter="brun">Brun</button>
+                    <button data-filter="orange">Orange</button>
+                    <button data-filter="gyllene">Gyllene</button>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Årtal</h3>
+                    <button data-filter="2015">2015</button>
+                    <button data-filter="2016">2016</button>
+                    <button data-filter="2017">2017</button>
+                    <button data-filter="2018">2018</button>
+                    <button data-filter="2019">2019</button>
+                    <button data-filter="2020">2020</button>
+                </div>
+                
+                <div class="">
+                    <button id="clearFilters" class="clear-filters">Rensa filtrering</button>
+                </div>
+            </div>
+        </aside>
+
+        <section id="animalContainer" class="animals" aria-label="Lista med djur">
+            <article class="animal" data-tags="rovdjur,tiger,däggdjur,orange,2017">
+                <img src="images/Tiger.jpg" alt="En tiger" loading="lazy" />
+                <h3>Tiger</h3>
+                <p class="type">Däggdjur</p>
+                <p class="color">Orange med ränder</p>
+                <p class="year">2017</p>
+                <button class="info-btn"
+                        data-name="Tiger"
+                        data-type="Däggdjur"
+                        data-color="Orange med ränder"
+                        data-year="2017"
+                        data-desc="Tigern är världens största kattdjur och en skicklig jägare. Den lever främst ensam i skogar och gräsmarker, jagar ofta på natten och kan springa upp till 60 km/h under korta sträckor. Tigerns päls är orange med svarta ränder, vilket hjälper till med kamouflage.">
+                    Mer info
+                </button>
+            </article>
+
+            <article class="animal" data-tags="rovdjur,lejon,däggdjur,gyllene,2016">
+                <img src="images/Lejon.jpg" alt="Ett lejon" loading="lazy" />
+                <h3>Lejon</h3>
+                <p class="type">Däggdjur</p>
+                <p class="color">Gyllene</p>
+                <p class="year">2016</p>
+                <button class="info-btn"
+                        data-name="Lejon"
+                        data-type="Däggdjur"
+                        data-color="Gyllene"
+                        data-year="2016"
+                        data-desc="Lejonet är ett socialt kattdjur som lever i flockar, ofta kallade 'prider'. Kända som 'savannens kung', spenderar de mycket tid på att vila i skuggan och jagar främst på natten.">
+                    Mer info
+                </button>
+            </article>
+            <article class="animal" data-tags="järv,däggdjur,rovdjur,2010">
+                <img src="images/Jarv.jpg" alt="En järv" loading="lazy" />
+                <h3>Järv</h3>
+                <p class="type">Däggdjur</p>
+                <p class="color">Brun</p>
+                <p class="year">2010</p>
+                <button class="info-btn"
+                        data-name="Järv"
+                        data-type="Däggdjur"
+                        data-color="Brun"
+                        data-year="2010"
+                        data-desc="Järven är ett starkt och robust rovdjur som lever i norra skogar och tundra. Den är känd för sin intelligens och uthållighet.">
+                    Mer info
+                </button>
+            </article>
+
+            <article class="animal" data-tags="björn,däggdjur,rovdjur,brun,2015">
+                <img src="images/Bjorn.jpg" alt="En brunbjörn" loading="lazy" />
+                <h3>Björn</h3>
+                <p class="type">Däggdjur</p>
+                <p class="color">Brun</p>
+                <p class="year">2015</p>
+                <button class="info-btn"
+                        data-name="Björn"
+                        data-type="Däggdjur"
+                        data-color="Brun"
+                        data-year="2015"
+                        data-desc="Björnen är ett stort och nyfiket däggdjur som trivs i skogar och fjäll. Den är skicklig på att fiska i floder och leta efter bär.">
+                    Mer info
+                </button>
+            </article>
+
+            <article class="animal" data-tags="älg,däggdjur,herbivor,brun,2018">
+                <img src="images/Alg.jpg" alt="En älg" loading="lazy" />
+                <h3>Älg</h3>
+                <p class="type">Däggdjur</p>
+                <p class="color">Brun</p>
+                <p class="year">2018</p>
+                <button class="info-btn"
+                        data-name="Älg"
+                        data-type="Däggdjur"
+                        data-color="Brun"
+                        data-year="2018"
+                        data-desc="Älgen är ett stort och imponerande däggdjur som lever i skogar och våtmarker. Den är fredlig men kan bli aggressiv vid behov.">
+                    Mer info
+                </button>
+            </article>
+
+            <article class="animal" data-tags="utter,däggdjur,brun,vattenlevande,rovdjur">
+                <img src="images/Utter.jpg" alt="En utter" loading="lazy" />
+                <h3>Utter</h3>
+                <p class="type">Däggdjur</p>
+                <p class="color">Brun</p>
+                <p class="year">2019</p>
+                <button class="info-btn"
+                        data-name="Utter"
+                        data-type="Däggdjur"
+                        data-color="Brun"
+                        data-year="2019"
+                        data-desc="Uttern är ett lekfullt och socialt vattenlevande däggdjur som lever vid floder och sjöar. Den är en skicklig simmare.">
+                    Mer info
+                </button>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content-wrapper">
+            <div class="footer-contact">
+                <h3>Kontakta Oss</h3>
+                <p><strong>Telefon:</strong> <a href="tel:+46123456789">012-345 67 89</a></p>
+                <p><strong>E-post:</strong> <a href="mailto:info@minaizoo.se">info@minaizoo.se</a></p>
+
+                <p class="address">
+                    <strong>Besöksadress:</strong><br>
+                    Djurgårdsgatan 10<br>
+                    123 45 Djurstaden
+                </p>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Följ oss i sociala medier</h3>
+                <ul class="social-icons">
+                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="X/Twitter">X/Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Minai Zoo. Alla rättigheter reserverade.</p>
+        </div>
+    </footer>
+
+    <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button id="closeModal" class="modal-close" aria-label="Stäng">✕</button>
+            <h2 id="modalTitle"></h2>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
