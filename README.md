@@ -58,5 +58,6 @@ Things I’d love to add later:
 
 ### ✨ Final Words
 
-This was an important milestone in my journey into web development.  
-I’m proud of the result and excited to continue learning and creating! 🧡
+This project became an important milestone in my journey into web development.  
+I got accepted into the program — and I’m very excited! 🎉  
+I’m proud of the result and looking forward to continuing to learn, grow, and create amazing things! 🧡
