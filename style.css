@@ -17,9 +17,17 @@
   --color-shadow-medium: rgba(0, 0, 0, 0.12);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   --gradient-button: linear-gradient(135deg, var(--color-primary), #2d5980);
-  --gradient-button-hover: linear-gradient(135deg, #4b83c1, var(--color-primary));
+  --gradient-button-hover: linear-gradient(
+    135deg,
+    #4b83c1,
+    var(--color-primary)
+  );
   --gradient-clear: linear-gradient(135deg, #bfc9bf, #8a9f8a);
   --gradient-clear-hover: linear-gradient(135deg, #a9bda9, #7b917b);
 
@@ -50,7 +58,8 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--color-text-dark);
   background-color: var(--color-background-main);
 }
@@ -177,7 +186,9 @@ button:focus-visible,
 .cta-button:hover,
 .cta-button:focus-visible {
   /* Effekt */
-  transform: translateY(-2px); /* Använder translateY för enhetlighet med hero-stil */
+  transform: translateY(
+    -2px
+  ); /* Använder translateY för enhetlighet med hero-stil */
   outline: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -201,13 +212,13 @@ button:focus-visible,
   overflow: hidden;
 
   /* Bakgrundsbild */
-  background: url('images/Entre.jpg') center/cover no-repeat;
+  background: url("images/Entre.jpg") center/cover no-repeat;
   color: var(--color-text-light);
 }
 
 /* Överlagring (Dark overlay) */
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
@@ -582,7 +593,11 @@ footer {
   margin-top: 2.5rem;
   text-align: left;
   font-size: 0.9rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   color: var(--color-text-light);
 }
 
